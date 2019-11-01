@@ -1,0 +1,6 @@
+#zoo {
+    background-color: lavender;
+    border: 1px solid lightgrey;
+    display: flex;
+    flex-wrap: wrap;
+}
