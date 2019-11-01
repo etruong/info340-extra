@@ -18,24 +18,12 @@ const ANIMALS = {
 
 // Append a div with the id 'zoo' to the div with the class name 'container' the animal 
 // container will contain all the animals
-let containerRef = document.querySelector(".container");
-let animalContainer = document.createElement("div");
-animalContainer.id = "zoo";
-containerRef.append(animalContainer);
+
 
 // Create a function called generateAnimal that with the given animal image location in the
 // ANIMALS constants, create and returns a div with the given size and background image 
 // * Note make sure to set the background size as cover, background repeat as no repeat
-function generateAnimal(imgLocation, size) {
-    let animal = document.createElement("div");
-    animal.style.backgroundImage = 'url(' + imgLocation + ')';
-    animal.style.backgroundSize = "cover";
-    animal.style.backgroundRepeat = "no-repeat";
-    animal.style.width = size + "px";
-    animal.style.height = size + "px";
 
-    return animal;
-}
 
 // Make sure the function works by appending a cat to the zoo container, then comment out
 // the code in further steps
@@ -47,13 +35,6 @@ function generateAnimal(imgLocation, size) {
 // animal images generates a row of animals and appends them to the parent given
 // make sure all the animals have a width and height that can be equally distributed
 // with the given parent container (hint use getBoundatingClientRect())
-function generateAnimalRow(animals, parent) {
-    let size = Math.round(parent.getBoundingClientRect().width / animals.length);
-    animals.forEach((animal) => {
-        let animalDiv = generateAnimal(animal, size);
-        parent.append(animalDiv)
-    });
-}
 
 // generateAnimalRow(ANIMALS.cats, animalContainer);
 
@@ -65,6 +46,6 @@ function generateAnimalRow(animals, parent) {
 
 // Empty out the 'container' div to start the new problem 
 // (hint use: https://www.w3schools.com/jsref/prop_html_innerhtml.asp)
-document.querySelector(".container").innerHTML = "";
+
 
 
